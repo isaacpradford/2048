@@ -5,7 +5,7 @@ Here's a quick overview for what this is and how I wrote it. Basically, when I w
 
 As I've been learning to program, I've wanted to learn how to program things like that, things that were fun and simple that could be understood by anyone but could be difficult and entertaining at the same time. Since this game fits that bill, I decided I'd try my hand at programming it, and this is what I've come up with.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/peY3Gy4QCBY)
 
 # Development Environment
 
