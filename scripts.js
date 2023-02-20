@@ -50,12 +50,17 @@ function generateTile() {
 function displayBoard(board){
     const container = document.getElementById('board');
     container.innerHTML = '';
+
     for(let r = 0; r < ROWS; r++) {
         for(let c = 0; c < COLS; c++) {
             const tile = document.createElement("div")
             tile.className = "tile x" + board[r][c];
             tile.innerHTML = board[r][c];
             container.appendChild(tile)
+
+            if(board[r][c] == 0) {
+                tile.innerHTML = ''
+            }
         }
     }
 }
@@ -69,7 +74,7 @@ document.addEventListener("keyup", (e) => {
         slideLeft();
         keyCount += 1;
 
-        if (keyCount % 3 == 0) {
+        if (keyCount % 2 == 0) {
             generateTile()
         }
 
@@ -77,21 +82,21 @@ document.addEventListener("keyup", (e) => {
         slideRight();
         keyCount += 1;
 
-        if (keyCount % 3 == 0) {
+        if (keyCount % 2 == 0) {
             generateTile()
         }
     } else if (e.code == "ArrowUp") {
         slideUp();
         keyCount += 1;
 
-        if (keyCount % 3 == 0) {
+        if (keyCount % 2 == 0) {
             generateTile()
         }
     } else if (e.code == "ArrowDown") {
         slideDown();
         keyCount += 1;
 
-        if (keyCount % 3 == 0) {
+        if (keyCount % 2 == 0) {
             generateTile()
         }
     }
